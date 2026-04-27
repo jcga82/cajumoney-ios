@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0312D2F61821D141EEC16EF8 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68504BF0C0144F28C0994DC /* TodayView.swift */; };
+		08486405C5A23ABDA9DFAC09 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29612E5D6E703AE76E829A6 /* Config.swift */; };
+		08A40BC6F64A30687619D572 /* AccountIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50C0363A057F369073F3F9 /* AccountIcon.swift */; };
+		10996F0B71B1538A264890F5 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F672CC803C0799389951EF /* AccountsView.swift */; };
+		1E516F195A9E35A2B040B6E3 /* CajuriteFinanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CC708E32FB8F2F15F8BA4 /* CajuriteFinanceApp.swift */; };
+		288250CFAFA13E1AA446A046 /* EditTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF2714E8C58EF2F74680FF1 /* EditTransactionView.swift */; };
+		3EC16054E37779753373C7F3 /* ScheduledViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5287907D75DA143C532DF29 /* ScheduledViewModel.swift */; };
+		48B25F341F0E40E661F9C8DC /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D8CEF99AADF3A0AC61759 /* TransactionRow.swift */; };
+		4CB6093A444E37A5AF0F8A9A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE9E281CEBD1BE86974576 /* Models.swift */; };
+		55CC097A128470F91A40D672 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD336491333D7695F7F8CB2 /* TransactionsView.swift */; };
+		5EA8C91C2E98787FF8EB6496 /* NewTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DAD2CA8F72BE23E7D75A88 /* NewTransactionViewModel.swift */; };
+		7024D8BE26D2BD283166E5B7 /* NewTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798045ED76D829455E8565E8 /* NewTransactionView.swift */; };
+		8215F3D1CCE05FFC522269CD /* BudgetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5AF4A54BBE6724C4548418 /* BudgetsViewModel.swift */; };
+		82E10608F8D95C18363E92CE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9591A28A87577705067DFC2 /* APIClient.swift */; };
+		85B611A49079B8EE7E466987 /* ScheduledModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765C70B30BCCA96DE62A9A7 /* ScheduledModels.swift */; };
+		8A09B7F9840923A08058AAE3 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E63C9AB567521EFB367822 /* TodayViewModel.swift */; };
+		8D8A3A03C3EB56D0E547C70F /* AccountTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0FAFDD6AC7283E4CD85211 /* AccountTransactionsView.swift */; };
+		8FE9CFE05E4F0A843AC09ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3710595FDDDC890A82CA1 /* Assets.xcassets */; };
+		9BAF3B573C84BEB6205C6245 /* ScheduledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64487C49CA06646D79F4CB8 /* ScheduledView.swift */; };
+		A3B19BE19900935B47492212 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDE72DF595EAB7ECE124F3D /* TransactionsViewModel.swift */; };
+		B8E28A2E76FA4199794F92AD /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0C8F93D3FBF1A0812C1587 /* AccountsViewModel.swift */; };
+		BA2F6B4F3C25E3E76B2AF99D /* BudgetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0430734AC53C57DFE91B7 /* BudgetModels.swift */; };
+		BDD20F04A0B9F3347DD81766 /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909B31A6CB5040B2F17C181 /* BudgetsView.swift */; };
+		FA19448AED129E745133C6C2 /* EditScheduledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D0F72B23316C9FB5D52F /* EditScheduledView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		050CC708E32FB8F2F15F8BA4 /* CajuriteFinanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CajuriteFinanceApp.swift; sourceTree = "<group>"; };
+		1EE3710595FDDDC890A82CA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32E63C9AB567521EFB367822 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
+		4BFE9E281CEBD1BE86974576 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		5765C70B30BCCA96DE62A9A7 /* ScheduledModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledModels.swift; sourceTree = "<group>"; };
+		6B50C0363A057F369073F3F9 /* AccountIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountIcon.swift; sourceTree = "<group>"; };
+		6CD336491333D7695F7F8CB2 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		6FE56415B2A9BA0CC61D7A8F /* CajuriteFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CajuriteFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		798045ED76D829455E8565E8 /* NewTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionView.swift; sourceTree = "<group>"; };
+		8B5AF4A54BBE6724C4548418 /* BudgetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsViewModel.swift; sourceTree = "<group>"; };
+		8EDE72DF595EAB7ECE124F3D /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		8FD0430734AC53C57DFE91B7 /* BudgetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModels.swift; sourceTree = "<group>"; };
+		9284D0F72B23316C9FB5D52F /* EditScheduledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScheduledView.swift; sourceTree = "<group>"; };
+		972D8CEF99AADF3A0AC61759 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		AA9BB1FE9A7DF8FE3F6BC94B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C29612E5D6E703AE76E829A6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		C64487C49CA06646D79F4CB8 /* ScheduledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledView.swift; sourceTree = "<group>"; };
+		D5287907D75DA143C532DF29 /* ScheduledViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledViewModel.swift; sourceTree = "<group>"; };
+		D68504BF0C0144F28C0994DC /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		D7DAD2CA8F72BE23E7D75A88 /* NewTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewModel.swift; sourceTree = "<group>"; };
+		E9591A28A87577705067DFC2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E9F672CC803C0799389951EF /* AccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
+		EBF2714E8C58EF2F74680FF1 /* EditTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTransactionView.swift; sourceTree = "<group>"; };
+		EE0C8F93D3FBF1A0812C1587 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		EE0FAFDD6AC7283E4CD85211 /* AccountTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTransactionsView.swift; sourceTree = "<group>"; };
+		F909B31A6CB5040B2F17C181 /* BudgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0CA60D2B69C0192EF22602D0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EE0C8F93D3FBF1A0812C1587 /* AccountsViewModel.swift */,
+				8B5AF4A54BBE6724C4548418 /* BudgetsViewModel.swift */,
+				D7DAD2CA8F72BE23E7D75A88 /* NewTransactionViewModel.swift */,
+				D5287907D75DA143C532DF29 /* ScheduledViewModel.swift */,
+				32E63C9AB567521EFB367822 /* TodayViewModel.swift */,
+				8EDE72DF595EAB7ECE124F3D /* TransactionsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2026C0EDE0F5D8EC3729DCBE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E9591A28A87577705067DFC2 /* APIClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		36B3FD48A5E9018912CD0EAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FE56415B2A9BA0CC61D7A8F /* CajuriteFinance.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A9719D2CC94D7F3B15FA4C7 /* CajuriteFinance */ = {
+			isa = PBXGroup;
+			children = (
+				1EE3710595FDDDC890A82CA1 /* Assets.xcassets */,
+				050CC708E32FB8F2F15F8BA4 /* CajuriteFinanceApp.swift */,
+				C29612E5D6E703AE76E829A6 /* Config.swift */,
+				AA9BB1FE9A7DF8FE3F6BC94B /* Info.plist */,
+				9B588E06FBEB4B3E3167A28F /* Models */,
+				2026C0EDE0F5D8EC3729DCBE /* Services */,
+				0CA60D2B69C0192EF22602D0 /* ViewModels */,
+				D8DFE24B1D47C904E03C7503 /* Views */,
+			);
+			path = CajuriteFinance;
+			sourceTree = "<group>";
+		};
+		8F18B3EB13A6448A26F68A85 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6B50C0363A057F369073F3F9 /* AccountIcon.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9B588E06FBEB4B3E3167A28F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8FD0430734AC53C57DFE91B7 /* BudgetModels.swift */,
+				4BFE9E281CEBD1BE86974576 /* Models.swift */,
+				5765C70B30BCCA96DE62A9A7 /* ScheduledModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8DFE24B1D47C904E03C7503 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9F672CC803C0799389951EF /* AccountsView.swift */,
+				EE0FAFDD6AC7283E4CD85211 /* AccountTransactionsView.swift */,
+				F909B31A6CB5040B2F17C181 /* BudgetsView.swift */,
+				9284D0F72B23316C9FB5D52F /* EditScheduledView.swift */,
+				EBF2714E8C58EF2F74680FF1 /* EditTransactionView.swift */,
+				798045ED76D829455E8565E8 /* NewTransactionView.swift */,
+				C64487C49CA06646D79F4CB8 /* ScheduledView.swift */,
+				D68504BF0C0144F28C0994DC /* TodayView.swift */,
+				972D8CEF99AADF3A0AC61759 /* TransactionRow.swift */,
+				6CD336491333D7695F7F8CB2 /* TransactionsView.swift */,
+				8F18B3EB13A6448A26F68A85 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E527F7C2A4150EAF726947B6 = {
+			isa = PBXGroup;
+			children = (
+				7A9719D2CC94D7F3B15FA4C7 /* CajuriteFinance */,
+				36B3FD48A5E9018912CD0EAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CAB438BBE4712F63FA6911E /* CajuriteFinance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0E6261D7FBCC8F35E98E086 /* Build configuration list for PBXNativeTarget "CajuriteFinance" */;
+			buildPhases = (
+				CC64190DE7C96EA0745DD179 /* Sources */,
+				518200BE17DEF08D765F19CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CajuriteFinance;
+			packageProductDependencies = (
+			);
+			productName = CajuriteFinance;
+			productReference = 6FE56415B2A9BA0CC61D7A8F /* CajuriteFinance.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2FBC901B8CE40692DD68A17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = F7EA5ED59C0070866A3FB7BD /* Build configuration list for PBXProject "CajuriteFinance" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E527F7C2A4150EAF726947B6;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 36B3FD48A5E9018912CD0EAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CAB438BBE4712F63FA6911E /* CajuriteFinance */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		518200BE17DEF08D765F19CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FE9CFE05E4F0A843AC09ACC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC64190DE7C96EA0745DD179 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E10608F8D95C18363E92CE /* APIClient.swift in Sources */,
+				08A40BC6F64A30687619D572 /* AccountIcon.swift in Sources */,
+				8D8A3A03C3EB56D0E547C70F /* AccountTransactionsView.swift in Sources */,
+				10996F0B71B1538A264890F5 /* AccountsView.swift in Sources */,
+				B8E28A2E76FA4199794F92AD /* AccountsViewModel.swift in Sources */,
+				BA2F6B4F3C25E3E76B2AF99D /* BudgetModels.swift in Sources */,
+				BDD20F04A0B9F3347DD81766 /* BudgetsView.swift in Sources */,
+				8215F3D1CCE05FFC522269CD /* BudgetsViewModel.swift in Sources */,
+				1E516F195A9E35A2B040B6E3 /* CajuriteFinanceApp.swift in Sources */,
+				08486405C5A23ABDA9DFAC09 /* Config.swift in Sources */,
+				FA19448AED129E745133C6C2 /* EditScheduledView.swift in Sources */,
+				288250CFAFA13E1AA446A046 /* EditTransactionView.swift in Sources */,
+				4CB6093A444E37A5AF0F8A9A /* Models.swift in Sources */,
+				7024D8BE26D2BD283166E5B7 /* NewTransactionView.swift in Sources */,
+				5EA8C91C2E98787FF8EB6496 /* NewTransactionViewModel.swift in Sources */,
+				85B611A49079B8EE7E466987 /* ScheduledModels.swift in Sources */,
+				9BAF3B573C84BEB6205C6245 /* ScheduledView.swift in Sources */,
+				3EC16054E37779753373C7F3 /* ScheduledViewModel.swift in Sources */,
+				0312D2F61821D141EEC16EF8 /* TodayView.swift in Sources */,
+				8A09B7F9840923A08058AAE3 /* TodayViewModel.swift in Sources */,
+				48B25F341F0E40E661F9C8DC /* TransactionRow.swift in Sources */,
+				55CC097A128470F91A40D672 /* TransactionsView.swift in Sources */,
+				A3B19BE19900935B47492212 /* TransactionsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		36A220E0188CE64FD98E2D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = FP83S5TDG6;
+				INFOPLIST_FILE = CajuriteFinance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.cajurite.finance;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5294E75C4D9879DE6A953C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = FP83S5TDG6;
+				INFOPLIST_FILE = CajuriteFinance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.cajurite.finance;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97F3154438D4910D26317EBC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		B2353FABF435106C44C27401 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0E6261D7FBCC8F35E98E086 /* Build configuration list for PBXNativeTarget "CajuriteFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36A220E0188CE64FD98E2D87 /* Debug */,
+				5294E75C4D9879DE6A953C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F7EA5ED59C0070866A3FB7BD /* Build configuration list for PBXProject "CajuriteFinance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97F3154438D4910D26317EBC /* Debug */,
+				B2353FABF435106C44C27401 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2FBC901B8CE40692DD68A17 /* Project object */;
+}
