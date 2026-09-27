@@ -7,6 +7,7 @@ struct AccountTransactionsView: View {
     @State private var showNew = false
     @State private var editTx: Transaction? = nil
     @State private var collapsedMonths: Set<String> = []
+    @State private var searchText = ""
 
     var body: some View {
         VStack(spacing: 0) {
@@ -14,9 +15,9 @@ struct AccountTransactionsView: View {
                 ProgressView().frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 totalsBar
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 10)
-                    .background(Color(.systemGroupedBackground))
+                    .padding(.horizontal)
+                    .padding(.top, 8)
+                    .padding(.bottom, 4)
 
                 let balances = runningBalances
                 List {
@@ -25,7 +26,7 @@ struct AccountTransactionsView: View {
                         Section {
                             if !isCollapsed {
                                 ForEach(group.transactions) { tx in
-                                    TransactionRow(tx: tx, balance: balances[tx.id])
+                                    TransactionRow(tx: tx, balance: balances[tx.id], showAccount: false)
                                         .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                                             Button { editTx = tx } label: {
                                                 Label("Editar", systemImage: "pencil")
@@ -40,11 +41,14 @@ struct AccountTransactionsView: View {
                     }
                 }
                 .listStyle(.insetGrouped)
+                .scrollContentBackground(.hidden)
                 .refreshable { await load() }
             }
         }
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Buscar transacciones")
+        .appBackground()
         .navigationTitle(account.name)
-        .navigationBarTitleDisplayMode(.large)
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button { showNew = true } label: {
@@ -81,6 +85,10 @@ struct AccountTransactionsView: View {
             totalCell(title: "Saldo",    value: account.currentBalance, prefix: "",  color: account.currentBalance >= 0 ? .green : Color(red: 0.9, green: 0.3, blue: 0.3))
         }
         .frame(maxWidth: .infinity)
+        .padding(.vertical, 10)
+        .glassEffect(.regular, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous)
+            .stroke(Color.primary.opacity(0.08), lineWidth: 0.5))
     }
 
     private func totalCell(title: String, value: Double, prefix: String, color: Color) -> some View {
@@ -158,6 +166,16 @@ struct AccountTransactionsView: View {
 
     // MARK: - Grouping
 
+    private var filteredTransactions: [Transaction] {
+        guard !searchText.isEmpty else { return vm.transactions }
+        let q = searchText.lowercased()
+        return vm.transactions.filter {
+            $0.description.lowercased().contains(q) ||
+            ($0.notes?.lowercased().contains(q) ?? false) ||
+            ($0.category?.name.lowercased().contains(q) ?? false)
+        }
+    }
+
     private var groupedByMonth: [(key: String, title: String, transactions: [Transaction])] {
         let isoFull  = DateFormatter(); isoFull.dateFormat  = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         let isoShort = DateFormatter(); isoShort.dateFormat = "yyyy-MM-dd"
@@ -167,7 +185,7 @@ struct AccountTransactionsView: View {
         func parse(_ s: String) -> Date { isoFull.date(from: s) ?? isoShort.date(from: s) ?? Date() }
 
         var dict: [String: [Transaction]] = [:]
-        for tx in vm.transactions {
+        for tx in filteredTransactions {
             let key = String(tx.date.prefix(7))
             dict[key, default: []].append(tx)
         }

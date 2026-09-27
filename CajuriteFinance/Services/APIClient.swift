@@ -110,6 +110,40 @@ final class APIClient {
         _ = try await session.data(for: req)
     }
 
+    // MARK: - Training
+
+    func fetchTrainingSessions(dateFrom: String, dateTo: String) async throws -> [TrainingSession] {
+        let url = URL(string: "\(Config.baseURL)/api/training/sessions?date_from=\(dateFrom)&date_to=\(dateTo)")!
+        return try await get(url)
+    }
+
+    func fetchWeeklySummary(weekStart: String) async throws -> WeeklySummary {
+        let url = URL(string: "\(Config.baseURL)/api/training/summary?week_start=\(weekStart)")!
+        return try await get(url)
+    }
+
+    func fetchWellness(dateFrom: String, dateTo: String) async throws -> [GarminWellness] {
+        let url = URL(string: "\(Config.baseURL)/api/training/wellness?date_from=\(dateFrom)&date_to=\(dateTo)")!
+        return try await get(url)
+    }
+
+    // MARK: - Reports
+
+    func fetchNetWorthHistory(range: String = "1y") async throws -> [NetWorthPoint] {
+        let url = URL(string: "\(Config.baseURL)/api/finance/reports/networth-history?range=\(range)")!
+        return try await get(url)
+    }
+
+    func fetchByCategory(type: String, period: String = "month") async throws -> CategoryReportResponse {
+        let url = URL(string: "\(Config.baseURL)/api/finance/reports/by-category?type=\(type)&period=\(period)")!
+        return try await get(url)
+    }
+
+    func fetchIFSummary() async throws -> IFSummary {
+        let url = URL(string: "\(Config.baseURL)/api/resumen-if?period=mes")!
+        return try await get(url)
+    }
+
     // MARK: - Helpers
 
     private func get<T: Decodable>(_ url: URL) async throws -> T {
@@ -146,6 +180,7 @@ final class APIClient {
         f.dateFormat = "yyyy-MM-dd"
         return f.string(from: date)
     }
+
 }
 
 // MARK: - Request bodies
@@ -173,3 +208,4 @@ struct CreateTransactionBody: Encodable {
     let type: String           // "income" | "expense" | "transfer"
     let tags: [String]
 }
+

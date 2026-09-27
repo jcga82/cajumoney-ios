@@ -1,4 +1,5 @@
 import SwiftUI
+import Charts
 
 // MARK: - Grouping constants (hardcoded, mirrors dashboard.cajurite.es)
 
@@ -17,6 +18,7 @@ private func isBancos(_ name: String) -> Bool {
 private enum SubContent {
     case section(title: String, accounts: [Account])
     case account(Account)
+    case accountSmall(Account)
 }
 
 private func subContents(type: String, accounts: [Account]) -> [SubContent] {
@@ -40,8 +42,10 @@ private func subContents(type: String, accounts: [Account]) -> [SubContent] {
         for a in named { r.append(.account(a)) }
         if !otros.isEmpty { r.append(.section(title: "Otros (Cortijo, tierras...)", accounts: otros)) }
         return r
+    case "credit":
+        return accounts.map { .accountSmall($0) }
     default:
-        return accounts.map { .account($0) }
+        return accounts.map { .accountSmall($0) }
     }
 }
 
@@ -57,6 +61,9 @@ struct AccountsView: View {
             ScrollView {
                 VStack(spacing: 16) {
                     netWorthCard
+                    if !vm.networthHistory.isEmpty {
+                        networthChartCard
+                    }
                     ForEach(vm.groupedAccounts, id: \.type) { group in
                         accountGroup(group)
                     }
@@ -64,8 +71,19 @@ struct AccountsView: View {
                 .padding(.horizontal)
                 .padding(.bottom, 24)
             }
-            .background(Color(.systemBackground))
-            .navigationTitle("Cuentas")
+            .appBackground()
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    VStack(spacing: 1) {
+                        Text("Hola Juan Carlos")
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                        Text("Patrimonio")
+                            .font(.headline)
+                    }
+                }
+            }
             .refreshable { await vm.load() }
             .task { await vm.load() }
             .onChange(of: scenePhase) { _, phase in
@@ -84,6 +102,11 @@ struct AccountsView: View {
 
     private var netWorthCard: some View {
         VStack(spacing: 0) {
+            // Accent bar top
+            LinearGradient(colors: [.blue, .cyan], startPoint: .leading, endPoint: .trailing)
+                .frame(height: 3)
+                .clipShape(UnevenRoundedRectangle(topLeadingRadius: 16, topTrailingRadius: 16))
+
             HStack(spacing: 0) {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("PATRIMONIO NETO")
@@ -100,7 +123,7 @@ struct AccountsView: View {
                 VStack(alignment: .trailing, spacing: 6) {
                     Text("DEUDAS")
                         .font(.caption2.weight(.semibold))
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(.red.opacity(0.8))
                     Text(formatted(vm.totalDebt))
                         .font(.title2.weight(.bold))
                         .foregroundStyle(vm.totalDebt < 0 ? .red : .primary)
@@ -109,8 +132,11 @@ struct AccountsView: View {
             }
             .padding()
         }
-        .background(Color(.secondarySystemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .glassEffect(.regular, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke(LinearGradient(colors: [.blue.opacity(0.4), .cyan.opacity(0.15)], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 1)
+        )
     }
 
     // MARK: - Account Group (accordion)
@@ -157,8 +183,11 @@ struct AccountsView: View {
                 }
             }
         }
-        .background(Color(.secondarySystemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .glassEffect(.regular, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke(Color.primary.opacity(0.07), lineWidth: 0.5)
+        )
         .onAppear {
             if expanded.isEmpty { expanded.insert(group.type) }
         }
@@ -175,6 +204,8 @@ struct AccountsView: View {
             }
         case .account(let account):
             accountRow(account)
+        case .accountSmall(let account):
+            indentedAccountRow(account)
         }
     }
 
@@ -234,6 +265,86 @@ struct AccountsView: View {
             .padding(.horizontal)
             .padding(.vertical, 10)
         }
+    }
+
+    // MARK: - Net Worth Chart
+
+    private var networthYDomain: ClosedRange<Double> {
+        let values = vm.networthHistory.map(\.netWorth)
+        guard let lo = values.min(), let hi = values.max(), lo < hi else { return 0...1 }
+        let pad = (hi - lo) * 0.1
+        return (lo - pad)...(hi + pad)
+    }
+
+    private var networthChartCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Text("Evolución patrimonio")
+                    .font(.headline)
+                Spacer()
+                Text("12m")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.blue)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 3)
+                    .background(Capsule().fill(Color.blue.opacity(0.15)))
+            }
+            .padding(.horizontal)
+            .padding(.top)
+
+            Chart(vm.networthHistory) { point in
+                LineMark(
+                    x: .value("Mes", point.month),
+                    y: .value("Patrimonio", point.netWorth)
+                )
+                .interpolationMethod(.catmullRom)
+                .foregroundStyle(
+                    LinearGradient(colors: [.cyan, .blue], startPoint: .leading, endPoint: .trailing)
+                )
+                .lineStyle(StrokeStyle(lineWidth: 2.5))
+
+                AreaMark(
+                    x: .value("Mes", point.month),
+                    y: .value("Patrimonio", point.netWorth)
+                )
+                .interpolationMethod(.catmullRom)
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [Color.blue.opacity(0.3), Color.blue.opacity(0)],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
+            }
+            .chartYScale(domain: networthYDomain)
+            .chartXAxis {
+                AxisMarks(values: .stride(by: 3)) { value in
+                    if let str = value.as(String.self) {
+                        AxisGridLine(stroke: StrokeStyle(lineWidth: 0.3))
+                        AxisValueLabel { Text(str.suffix(5)).font(.caption2).foregroundStyle(.secondary) }
+                    }
+                }
+            }
+            .chartYAxis {
+                AxisMarks(position: .leading) { value in
+                    if let v = value.as(Double.self) {
+                        AxisGridLine(stroke: StrokeStyle(lineWidth: 0.3, dash: [3]))
+                        AxisValueLabel {
+                            Text(v >= 1000 ? "\(Int(v / 1000))K" : "\(Int(v))")
+                                .font(.caption2)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+            }
+            .frame(height: 80)
+            .padding(.horizontal)
+            .padding(.bottom)
+        }
+        .glassEffect(.regular, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke(LinearGradient(colors: [.blue.opacity(0.5), .cyan.opacity(0.2)], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 1)
+        )
     }
 
     private func formatted(_ value: Double) -> String {

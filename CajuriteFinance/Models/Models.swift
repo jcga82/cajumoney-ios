@@ -74,6 +74,28 @@ struct Category: Codable, Identifiable {
     let icon: String?
 }
 
+// MARK: - Reports
+
+struct NetWorthPoint: Codable, Identifiable {
+    var id: String { month }
+    let month: String
+    let netWorth: Double
+}
+
+struct CategoryReport: Codable, Identifiable {
+    var id: String { categoryId ?? categoryName }
+    let categoryId: String?
+    let categoryName: String
+    let categoryColor: String?
+    let amount: Double
+    let percentage: Double
+}
+
+struct CategoryReportResponse: Codable {
+    let data: [CategoryReport]
+    let total: Double
+}
+
 // MARK: - API Responses
 
 struct TransactionsResponse: Codable {

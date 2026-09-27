@@ -39,10 +39,12 @@ struct TransactionsView: View {
                         }
                     }
                     .listStyle(.insetGrouped)
+                    .scrollContentBackground(.hidden)
                     .refreshable { await vm.search() }
                 }
             }
             .navigationTitle("Transacciones")
+            .appBackground()
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button { showNew = true } label: {

@@ -1,14 +1,19 @@
 import Foundation
-import UIKit
 
 @MainActor
 final class AccountsViewModel: ObservableObject {
     @Published var accounts: [Account] = []
+    @Published var networthHistory: [NetWorthPoint] = []
     @Published var isLoading = false
     @Published var errorMessage: String?
 
+    private static let excludeFromNetWorth: Set<String> = ["cuenta carmen"]
+
     var netWorth: Double {
-        accounts.filter { $0.currentBalance > 0 }.reduce(0) { $0 + $1.currentBalance }
+        accounts
+            .filter { $0.currentBalance > 0 }
+            .filter { !Self.excludeFromNetWorth.contains($0.name.lowercased()) }
+            .reduce(0) { $0 + $1.currentBalance }
     }
 
     var totalDebt: Double {
@@ -35,10 +40,12 @@ final class AccountsViewModel: ObservableObject {
         errorMessage = nil
         defer { isLoading = false }
         do {
-            accounts = try await APIClient.shared.fetchAccounts()
+            async let accs    = APIClient.shared.fetchAccounts()
+            async let history = APIClient.shared.fetchNetWorthHistory()
+            accounts        = try await accs
+            networthHistory = try await history
         } catch {
             guard !(error is CancellationError), (error as? URLError)?.code != .cancelled else { return }
-            guard UIApplication.shared.applicationState == .active else { return }
             errorMessage = error.localizedDescription
         }
     }

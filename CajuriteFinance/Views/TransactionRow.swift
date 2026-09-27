@@ -3,42 +3,46 @@ import SwiftUI
 struct TransactionRow: View {
     let tx: Transaction
     var balance: Double? = nil   // saldo tras esta transacción (opcional)
+    var showAccount: Bool = true
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: 10) {
             CategoryIcon(category: tx.category.map {
                 CategoryRef(id: $0.id, name: $0.name, color: $0.color, icon: $0.icon)
-            }, type: tx.type, size: 42)
+            }, type: tx.type, size: 28)
 
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: 1) {
                 Text(tx.description)
-                    .font(.body)
+                    .font(.subheadline)
                     .lineLimit(1)
                 HStack(spacing: 4) {
-                    if let acc = tx.account {
+                    if showAccount, let acc = tx.account {
                         Text(acc.name).lineLimit(1)
+                        Text("·")
+                    } else if let notes = tx.notes, !notes.isEmpty {
+                        Text(notes).lineLimit(1)
+                        Text("·")
                     }
-                    Text("·")
                     Text(shortDate(tx.date))
                 }
-                .font(.caption)
+                .font(.caption2)
                 .foregroundStyle(.secondary)
             }
 
             Spacer()
 
-            VStack(alignment: .trailing, spacing: 2) {
+            VStack(alignment: .trailing, spacing: 1) {
                 Text(formattedAmount)
-                    .font(.body.monospacedDigit().weight(.medium))
+                    .font(.subheadline.monospacedDigit().weight(.medium))
                     .foregroundStyle(amountColor)
                 if let balance {
                     Text(balance.formatted(.number.precision(.fractionLength(2))) + " €")
-                        .font(.caption.monospacedDigit())
+                        .font(.caption2.monospacedDigit())
                         .foregroundStyle(.secondary)
                 }
             }
         }
-        .padding(.vertical, 6)
+        .padding(.vertical, 2)
     }
 
     private var amountColor: Color {

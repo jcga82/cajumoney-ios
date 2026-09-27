@@ -76,9 +76,11 @@ struct ScheduledView: View {
                         }
                     }
                     .listStyle(.insetGrouped)
+                    .scrollContentBackground(.hidden)
                 }
             }
             .navigationTitle("Programadas")
+            .appBackground()
             .refreshable { await vm.load() }
             .task { await vm.load() }
             .onChange(of: scenePhase) { _, phase in

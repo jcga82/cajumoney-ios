@@ -10,9 +10,12 @@
 		0312D2F61821D141EEC16EF8 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68504BF0C0144F28C0994DC /* TodayView.swift */; };
 		08486405C5A23ABDA9DFAC09 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29612E5D6E703AE76E829A6 /* Config.swift */; };
 		08A40BC6F64A30687619D572 /* AccountIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B50C0363A057F369073F3F9 /* AccountIcon.swift */; };
+		A3F1C92B5D6E4087B2A91CF0 /* AppBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A04C3B1F5296C4E07D82 /* AppBackground.swift */; };
 		10996F0B71B1538A264890F5 /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F672CC803C0799389951EF /* AccountsView.swift */; };
 		1E516F195A9E35A2B040B6E3 /* CajuriteFinanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050CC708E32FB8F2F15F8BA4 /* CajuriteFinanceApp.swift */; };
 		288250CFAFA13E1AA446A046 /* EditTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF2714E8C58EF2F74680FF1 /* EditTransactionView.swift */; };
+		3915BB997E3D2E52294D0AC9 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F2356F444FC6A9CA3D1D80 /* TrainingView.swift */; };
+		78DF15B5A6DA4A29B43206AE /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF82E43A12C42898FA936BD /* GoalsView.swift */; };
 		3EC16054E37779753373C7F3 /* ScheduledViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5287907D75DA143C532DF29 /* ScheduledViewModel.swift */; };
 		48B25F341F0E40E661F9C8DC /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D8CEF99AADF3A0AC61759 /* TransactionRow.swift */; };
 		4CB6093A444E37A5AF0F8A9A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE9E281CEBD1BE86974576 /* Models.swift */; };
@@ -27,28 +30,35 @@
 		8FE9CFE05E4F0A843AC09ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3710595FDDDC890A82CA1 /* Assets.xcassets */; };
 		9BAF3B573C84BEB6205C6245 /* ScheduledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64487C49CA06646D79F4CB8 /* ScheduledView.swift */; };
 		A3B19BE19900935B47492212 /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDE72DF595EAB7ECE124F3D /* TransactionsViewModel.swift */; };
+		AE555EC1D713C75FABC49FCE /* TrainingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9411021B873D47ED96E3C6E1 /* TrainingModels.swift */; };
 		B8E28A2E76FA4199794F92AD /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0C8F93D3FBF1A0812C1587 /* AccountsViewModel.swift */; };
 		BA2F6B4F3C25E3E76B2AF99D /* BudgetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0430734AC53C57DFE91B7 /* BudgetModels.swift */; };
 		BDD20F04A0B9F3347DD81766 /* BudgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909B31A6CB5040B2F17C181 /* BudgetsView.swift */; };
+		C78596901AE57B9834C2174D /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2139C9B77AE20678E2497D88 /* TrainingViewModel.swift */; };
 		FA19448AED129E745133C6C2 /* EditScheduledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D0F72B23316C9FB5D52F /* EditScheduledView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		050CC708E32FB8F2F15F8BA4 /* CajuriteFinanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CajuriteFinanceApp.swift; sourceTree = "<group>"; };
 		1EE3710595FDDDC890A82CA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2139C9B77AE20678E2497D88 /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		32E63C9AB567521EFB367822 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		4BFE9E281CEBD1BE86974576 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		5765C70B30BCCA96DE62A9A7 /* ScheduledModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledModels.swift; sourceTree = "<group>"; };
 		6B50C0363A057F369073F3F9 /* AccountIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountIcon.swift; sourceTree = "<group>"; };
+		D7E8A04C3B1F5296C4E07D82 /* AppBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
 		6CD336491333D7695F7F8CB2 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
-		6FE56415B2A9BA0CC61D7A8F /* CajuriteFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CajuriteFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FE56415B2A9BA0CC61D7A8F /* CajuriteFinance.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CajuriteFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		798045ED76D829455E8565E8 /* NewTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionView.swift; sourceTree = "<group>"; };
 		8B5AF4A54BBE6724C4548418 /* BudgetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetsViewModel.swift; sourceTree = "<group>"; };
 		8EDE72DF595EAB7ECE124F3D /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
 		8FD0430734AC53C57DFE91B7 /* BudgetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModels.swift; sourceTree = "<group>"; };
 		9284D0F72B23316C9FB5D52F /* EditScheduledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScheduledView.swift; sourceTree = "<group>"; };
+		9411021B873D47ED96E3C6E1 /* TrainingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModels.swift; sourceTree = "<group>"; };
 		972D8CEF99AADF3A0AC61759 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		AA9BB1FE9A7DF8FE3F6BC94B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B7F2356F444FC6A9CA3D1D80 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		CCF82E43A12C42898FA936BD /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
 		C29612E5D6E703AE76E829A6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		C64487C49CA06646D79F4CB8 /* ScheduledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledView.swift; sourceTree = "<group>"; };
 		D5287907D75DA143C532DF29 /* ScheduledViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +81,7 @@
 				D7DAD2CA8F72BE23E7D75A88 /* NewTransactionViewModel.swift */,
 				D5287907D75DA143C532DF29 /* ScheduledViewModel.swift */,
 				32E63C9AB567521EFB367822 /* TodayViewModel.swift */,
+				2139C9B77AE20678E2497D88 /* TrainingViewModel.swift */,
 				8EDE72DF595EAB7ECE124F3D /* TransactionsViewModel.swift */,
 			);
 			path = ViewModels;
@@ -111,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				6B50C0363A057F369073F3F9 /* AccountIcon.swift */,
+				D7E8A04C3B1F5296C4E07D82 /* AppBackground.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -121,6 +133,7 @@
 				8FD0430734AC53C57DFE91B7 /* BudgetModels.swift */,
 				4BFE9E281CEBD1BE86974576 /* Models.swift */,
 				5765C70B30BCCA96DE62A9A7 /* ScheduledModels.swift */,
+				9411021B873D47ED96E3C6E1 /* TrainingModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +149,8 @@
 				798045ED76D829455E8565E8 /* NewTransactionView.swift */,
 				C64487C49CA06646D79F4CB8 /* ScheduledView.swift */,
 				D68504BF0C0144F28C0994DC /* TodayView.swift */,
+				B7F2356F444FC6A9CA3D1D80 /* TrainingView.swift */,
+				CCF82E43A12C42898FA936BD /* GoalsView.swift */,
 				972D8CEF99AADF3A0AC61759 /* TransactionRow.swift */,
 				6CD336491333D7695F7F8CB2 /* TransactionsView.swift */,
 				8F18B3EB13A6448A26F68A85 /* Components */,
@@ -180,6 +195,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					2CAB438BBE4712F63FA6911E = {
+						DevelopmentTeam = "";
+					};
+				};
 			};
 			buildConfigurationList = F7EA5ED59C0070866A3FB7BD /* Build configuration list for PBXProject "CajuriteFinance" */;
 			developmentRegion = en;
@@ -218,6 +238,7 @@
 			files = (
 				82E10608F8D95C18363E92CE /* APIClient.swift in Sources */,
 				08A40BC6F64A30687619D572 /* AccountIcon.swift in Sources */,
+				A3F1C92B5D6E4087B2A91CF0 /* AppBackground.swift in Sources */,
 				8D8A3A03C3EB56D0E547C70F /* AccountTransactionsView.swift in Sources */,
 				10996F0B71B1538A264890F5 /* AccountsView.swift in Sources */,
 				B8E28A2E76FA4199794F92AD /* AccountsViewModel.swift in Sources */,
@@ -236,6 +257,10 @@
 				3EC16054E37779753373C7F3 /* ScheduledViewModel.swift in Sources */,
 				0312D2F61821D141EEC16EF8 /* TodayView.swift in Sources */,
 				8A09B7F9840923A08058AAE3 /* TodayViewModel.swift in Sources */,
+				AE555EC1D713C75FABC49FCE /* TrainingModels.swift in Sources */,
+				3915BB997E3D2E52294D0AC9 /* TrainingView.swift in Sources */,
+				78DF15B5A6DA4A29B43206AE /* GoalsView.swift in Sources */,
+				C78596901AE57B9834C2174D /* TrainingViewModel.swift in Sources */,
 				48B25F341F0E40E661F9C8DC /* TransactionRow.swift in Sources */,
 				55CC097A128470F91A40D672 /* TransactionsView.swift in Sources */,
 				A3B19BE19900935B47492212 /* TransactionsViewModel.swift in Sources */,
@@ -250,7 +275,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = FP83S5TDG6;
 				INFOPLIST_FILE = CajuriteFinance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -267,7 +291,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = FP83S5TDG6;
 				INFOPLIST_FILE = CajuriteFinance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -332,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -392,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

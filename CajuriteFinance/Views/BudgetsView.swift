@@ -25,6 +25,7 @@ struct BudgetsView: View {
                 }
             }
             .navigationTitle("Presupuestos")
+            .appBackground()
             .refreshable { await vm.load() }
             .task { await vm.load() }
             .onChange(of: scenePhase) { _, phase in
